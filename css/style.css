@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  min-height: 100vh; /* ⭐ add this */
+
+ display: grid;
+  grid-template-columns: repeat(4, 1fr);
+ grid-template-rows: 150px 100px 100px 1fr 1fr;
+  grid-template-areas:
+    "header header header header"
+    "menu menu menu menu"
+    "topstories topstories topstories topstories"
+    "n1 n1 pht1 pht2"
+    "n1 n1 pht3 pht4";
+    gap: 12px;
+    border: 1px solid #000;
+   
+
+}
+.header {
+  grid-area: header;
+  background: #222;
+  color: #fff;
+}
+.menu {
+  grid-area: menu;
+  background: #444;
+  color: #fff;
+}
+.topstories {
+  grid-area: topstories;
+  background: #666;
+  color: #fff;
+}
+.image-box {
+  border: 1px solid #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.n1 {
+  grid-area: n1;
+  background-image: url(../img/camera.jpg);
+}
+
+.pht1 { grid-area: pht1; background-image: url(../img/camera.jpg); }
+.pht2 { grid-area: pht2; background-image: url(../img/camera.jpg); }
+.pht3 { grid-area: pht3; background-image: url(../img/camera.jpg); }
+.pht4 { grid-area: pht4; background-image: url(../img/camera.jpg); }
